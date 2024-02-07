@@ -1,4 +1,4 @@
-# Mobile Manipulator Lab Notebooks
+# Foundations of Robotics Lab Notebooks
 
 [![Binder](https://mybinder.org/badge_logo.svg)](<https://mybinder.org/v2/gh/AIResearchLab/foundations-of-robotics-labs/HEAD>)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](<https://colab.research.google.com/github/AIResearchLab/foundations-of-robotics-labs>)
@@ -24,19 +24,17 @@ The notebooks are designed to be used with a ROS workspace that contains the fol
 
 ## Installation
 
+### ROS
+
+The software requires ROS to be installed to use the `rospy` libraries. Follow the instructions for ROS `Noetic` on the [official website](https://ros.org).
+
 ### Virtual Environment
 
 Setting up a python virtual environment for can be useful in some development situations. Run the following command in a terminal at the top level of this git repository.
 
 ```python
+# create virtual environment
 python3 -m venv .venv
-
-# windows
-# may not work on windows
-.venv\Scripts\activate.bat
-
-pip install -r requirements.txt
-
 
 # linux
 source .venv/bin/activate

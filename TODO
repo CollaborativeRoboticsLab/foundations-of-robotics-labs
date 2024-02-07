@@ -1,1 +1,5 @@
 add pictures to everything by going through and doing examples
+
+disable snap mosquitto
+don't use docker on pi
+change pis to 2GB versions or pi 4
