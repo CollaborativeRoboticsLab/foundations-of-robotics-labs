@@ -2,7 +2,7 @@
 # Distributed under the terms of the Modified BSD License.
 # Based on
 # FROM jupyter/datascience-notebook:ubuntu-20.04
-FROM ghcr.io/mpo-web-consulting/ros-notebook:latest
+FROM ghcr.io/mpo-web-consulting/ros-notebook:datascience-noetic
 
 # get ROS package sources for the course
 USER root
