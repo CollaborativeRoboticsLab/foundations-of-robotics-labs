@@ -15,12 +15,12 @@ The notebooks are designed to be used with a ROS workspace that contains the fol
 
 ## Projects
 
-- [**Project 0 - Primers**](<./0-primers/>) - Primers on Python, the terminal, and ROS
-- [**Project 1 - Sense -> Think -> Act**](<./Project1/>) - Feedback & Robotic algorithm fundamentals
-- [**Project 2 - Perception, Filters, and Navigation**](<./Project2/>) - Localization, Navigation & Mapping
-- [**Project 3 - Kinematics**](<./3-kinematics/>) - Kinematics for a Robot Manipulator
-- [**Project 4**](<./Project4/>) - Mobile Robotics & Manipulator Control
-- [**Project 5**](<./Project5/>) - Perception and Navigation
+- [**Project 0 - Primers**](<./0-primers/readme.md>) - Primers on Python, the terminal, and ROS
+- [**Project 1 - Sense -> Think -> Act**](<./1-sense-think-act/README.md>) - Feedback & Robotic algorithm fundamentals
+- [**Project 2 - Perception, Filters, and Navigation**](<./2-navigation/readme.md>) - Localization, Navigation & Mapping
+- [**Project 3 - Kinematics**](<./3-kinematics/README.md>) - Kinematics for a Robot Manipulator
+- [**Project 4 - Mobile Manipulators**](<./4-mobile-manipulators/>) - Mobile Robotics & Manipulator Control
+- [**Project 5 - Inference**](<./5-inference/readme.md>) - Perception and Navigation
 
 ## Installation
 
@@ -44,17 +44,30 @@ pip install -r requirements.txt
 
 ### Running the code
 
-In a terminal at the top level of this git repository, run the following.
+The code is provided as [Jupyter notebooks](https://jupyter.org). In a terminal at the top level of this git repository, run the following.
 
 ```bash
 source .venv/bin/activate
 
 # start a jupyter notebook server
 jupyter lab --ip=0.0.0.0 --port=8888
+# open a web browser to the address provided in the terminal
+# for example: http://localhost:8888/lab?token=...
 
 # or run a voila server for the UI only version
 voila . --port=8866
 ```
+
+## Contributing
+
+Contributions are welcome. Please read the [contributing guidelines](<./CONTRIBUTING.md>) for more information.
+
+### Found an Issue?
+
+[![Fork](https://img.shields.io/badge/Fork-Repository-purple)](https://github.com/AIResearchLab/foundations-of-robotics-labs/fork)
+[![Open Issue](https://img.shields.io/badge/Open-Issue-purple)](https://github.com/AIResearchLab/foundations-of-robotics-labs/issues/new)
+
+Fork the repository, make a pull request or open an issue. Contributions are welcome.
 
 ## Experimental Software Disclaimer
 

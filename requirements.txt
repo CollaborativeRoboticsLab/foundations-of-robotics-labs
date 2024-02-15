@@ -14,3 +14,4 @@ jupyterlab-git
 jupyterlab-system-monitor
 jupyterlab_code_formatter
 jupyterlab_latex
+netifaces
