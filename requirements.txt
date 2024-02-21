@@ -15,3 +15,5 @@ jupyterlab-system-monitor
 jupyterlab_code_formatter
 jupyterlab_latex
 netifaces
+empy==3.3.4
+# conan==1.59
