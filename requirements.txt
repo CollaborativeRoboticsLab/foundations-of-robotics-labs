@@ -17,3 +17,4 @@ jupyterlab-system-monitor
 netifaces
 empy==3.3.4
 # conan==1.59
+roboticstoolbox-python
