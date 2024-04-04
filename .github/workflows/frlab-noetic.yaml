@@ -1,0 +1,76 @@
+# github action for building and pushing docker images
+name: Build, test, and publish Docker Image frlab-noetic
+
+env:
+  # OWNER: ${{ github.repository_owner }}
+  OWNER: airesearchlab
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.event.repository.name }}
+
+# For more details on events that trigger workflows see:
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+on:
+  schedule:
+    # monthly, at 07:00 on 1st day UTC time
+    - cron: "0 7 1 * *"
+  pull_request:
+    paths:
+      - ".github/workflows/**"
+      - ".binder/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+      - ".binder/**"
+  workflow_dispatch:
+
+# https://docs.github.com/en/actions/using-jobs/using-concurrency
+concurrency:
+  # only cancel in-progress jobs or runs for the current workflow - matches against branch & tags
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test-publish-images:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: Checkout Repo ⚡️
+        uses: actions/checkout@v4
+
+      - name: Get commit sha, this will be used as a tag later on 🏷
+        shell: bash
+        run: |
+          echo "sha12=$(echo ${GITHUB_SHA} | cut -c1-12)" >> $GITHUB_OUTPUT
+        id: get_sha
+
+      - name: Build image 🛠
+        run: |
+          docker build --rm --force-rm --tag ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest .binder
+        env:
+          DOCKER_BUILDKIT: 1
+          # Full logs for CI build
+          BUILDKIT_PROGRESS: plain
+
+      - name: Login to container registry 🔐
+        if: github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push Image to container registry 📤
+        uses: docker/build-push-action@v5
+        if: github.ref == 'refs/heads/main' || github.event_name == 'schedule'
+        with:
+          context: .binder
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-noetic
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-noetic-${{steps.get_sha.outputs.sha12}}

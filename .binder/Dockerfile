@@ -15,12 +15,14 @@ RUN apt-get update && \
 RUN mkdir -p /home/${NB_USER}/catkin_ws/src && \
     cd /home/${NB_USER}/catkin_ws/src && \
     git clone https://github.com/Kinovarobotics/ros_kortex && \
-    git clone https://github.com/AIResearchLab/sphero_rvr_ros
+    git clone https://github.com/AIResearchLab/sphero_rvr_ros && \
+    git clone https://github.com/AIResearchLab/sphero_rvr_desktop
 
 # update ROS dependencies
 RUN apt-get update && \
     rosdep install --from-paths /home/${NB_USER}/catkin_ws/src/ros_kortex --ignore-src -r -y && \
     rosdep install --from-paths /home/${NB_USER}/catkin_ws/src/sphero_rvr_ros --ignore-src -r -y && \
+    # rosdep install --from-paths /home/${NB_USER}/catkin_ws/src/sphero_rvr_desktop --ignore-src -r -y && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Make sure the contents of our repo are in ${HOME}
