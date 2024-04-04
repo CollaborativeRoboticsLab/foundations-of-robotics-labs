@@ -1,5 +1,5 @@
 # github action for building and pushing docker images
-name: Build, test, and publish Docker Image frlab-noetic
+name: Build and publish Docker Image frlab-noetic
 
 env:
   # OWNER: ${{ github.repository_owner }}
@@ -19,7 +19,7 @@ on:
       - ".binder/**"
   push:
     branches:
-      - main
+      - master
     paths:
       - ".github/workflows/**"
       - ".binder/**"
@@ -50,7 +50,7 @@ jobs:
 
       - name: Build image 🛠
         run: |
-          docker build --rm --force-rm --tag ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest .binder
+          docker build --rm --force-rm --tag ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest --file .binder/Dockerfile .
         env:
           DOCKER_BUILDKIT: 1
           # Full logs for CI build
