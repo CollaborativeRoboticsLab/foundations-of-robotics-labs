@@ -30,8 +30,8 @@ RUN mkdir -p ${HOME}/work
 COPY . ${HOME}/work
 
 # install pip dependencies
+# RUN pip install --no-cache-dir -r ${HOME}/work/requirements.txt && \
 RUN pip install --no-cache-dir -r ${HOME}/work/requirements-lock.txt && \
-    # RUN pip install --no-cache-dir -r ${HOME}/work/requirements.txt && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
