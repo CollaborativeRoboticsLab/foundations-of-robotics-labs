@@ -2,18 +2,10 @@ ipycanvas
 voila
 fuzzywuzzy
 nbgrader
-# rise
-jupyros
-# roslibpy
-# tensorflow
-# boto3
-# jupyter-ai
 jupyterlab
 jupyterlab-zethus
 jupyterlab-git
 jupyterlab-system-monitor
-# jupyterlab_code_formatter
-# jupyterlab_latex
 netifaces
 empy==3.3.4
 # conan==1.59
