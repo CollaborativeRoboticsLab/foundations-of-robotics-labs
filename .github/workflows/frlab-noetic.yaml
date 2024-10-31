@@ -3,7 +3,7 @@ name: Build and publish Docker Image frlab-noetic
 
 env:
   # OWNER: ${{ github.repository_owner }}
-  OWNER: airesearchlab
+  OWNER: collaborativeroboticslab
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.event.repository.name }}
 
