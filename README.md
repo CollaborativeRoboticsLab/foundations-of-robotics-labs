@@ -57,6 +57,18 @@ jupyter lab --ip=0.0.0.0 --port=8888
 voila . --port=8866
 ```
 
+### Docker
+
+A Dockerfile is provided to run the notebooks in a container. To build the container, run the following command in a terminal at the top level of this git repository.
+
+```bash
+# build the docker container
+docker build -t frlab -f .binder/Dockerfile .
+
+# run the docker container
+docker run -p 8888:8888 frlab jupyter lab --ip=0.0.0.0 --port=8888
+```
+
 ## Contributing
 
 Contributions are welcome. Please read the [contributing guidelines](<./CONTRIBUTING.md>) for more information.
