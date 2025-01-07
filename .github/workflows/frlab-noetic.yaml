@@ -69,6 +69,7 @@ jobs:
         if: github.ref == 'refs/heads/master' || github.event_name == 'schedule'
         with:
           context: .
+          file: .binder/Dockerfile
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest
