@@ -6,6 +6,8 @@
 
 These Python Jupyter notebooks are designed for academic teaching laboratories in robotics, using Gazebo for simulation up to physical deployment on robotic platforms. The students are not expected to install or deploy the required ROS workspace on their personal computer, but rather use lab resources at the university. The laboratories were designed at École de technologie supérieure, in Montréal, Canada, and adapted for the University of Canberra. Robotic platforms are available for the students to test their algorithms along with shared laptop stations.
 
+![UC Advanced Engineering Lab](./docs/images/adv-eng-lab.jpg)
+
 ## Prerequisites
 
 The notebooks are designed to be used with a ROS workspace that contains the following packages:
