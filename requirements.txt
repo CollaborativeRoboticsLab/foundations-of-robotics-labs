@@ -3,7 +3,6 @@ voila
 fuzzywuzzy
 nbgrader
 jupyterlab
-jupyterlab-zethus
 jupyterlab-git
 jupyterlab-system-monitor
 netifaces

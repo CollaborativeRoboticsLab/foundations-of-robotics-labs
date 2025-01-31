@@ -3,7 +3,6 @@ voila==0.4.4
 fuzzywuzzy==0.18.0
 nbgrader==0.8.5
 jupyterlab==3.4.8
-jupyterlab-zethus==1.3.1
 jupyterlab_git==0.44.0
 jupyterlab-system-monitor==0.8.0
 netifaces==0.11.0
