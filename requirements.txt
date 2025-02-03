@@ -1,7 +1,7 @@
-ipycanvas
-voila
-fuzzywuzzy
-nbgrader
+# ipycanvas
+# voila
+# fuzzywuzzy
+# nbgrader
 jupyterlab
 jupyterlab-git
 jupyterlab-system-monitor
