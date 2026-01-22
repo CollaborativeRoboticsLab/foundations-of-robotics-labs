@@ -159,6 +159,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .vscode/
+.github/copilot-instructions.md
 
 # nbgrader
 gradebook.db
+
+# otter grader
+.OTTER_LOG

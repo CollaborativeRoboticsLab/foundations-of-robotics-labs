@@ -2,6 +2,10 @@
 
 - [ ] add pictures to everything by going through and doing examples
 
-## Kinova
+## migrate ros2
 
-- [ ] move group action
+- [ ] notebooks
+- [ ] improve container use of UI tools
+- [ ] graphical container setup
+- [ ] navigation2 instead of gmapping, amcl, etc
+- [x] reorganize folder structures to simplify

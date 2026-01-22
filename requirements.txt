@@ -1,11 +1,7 @@
-# ipycanvas
-# voila
-# fuzzywuzzy
-# nbgrader
 jupyterlab
-jupyterlab-git
-jupyterlab-system-monitor
 netifaces
-empy==3.3.4
-# conan==1.59
+empy
 roboticstoolbox-python
+matplotlib
+numpy
+otter-grader

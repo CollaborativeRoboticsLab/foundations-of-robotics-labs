@@ -1,10 +1,7 @@
-# ipycanvas==0.13.1
-# voila==0.4.4
-# fuzzywuzzy==0.18.0
-# nbgrader==0.8.5
-jupyterlab==3.4.8
-jupyterlab_git==0.44.0
-jupyterlab-system-monitor==0.8.0
-netifaces==0.11.0
 empy==3.3.4
+jupyterlab==4.5.2
+matplotlib==3.10.8
+netifaces==0.11.0
+numpy==2.2.6
+otter-grader==6.1.6
 roboticstoolbox-python==1.1.0

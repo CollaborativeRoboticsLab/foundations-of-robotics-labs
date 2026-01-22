@@ -1,18 +1,19 @@
 {
-    "name": "robostack jupyter",
+    "name": "ros jupyter",
     "dockerFile": "../.binder/Dockerfile",
-    "remoteUser": "jovyan",
+    "remoteUser": "founder",
     "context": "..",
     "containerEnv": {
         "DISPLAY": "${localEnv:DISPLAY}"
     },
     "runArgs": [
-        "--privileged",
-        "--network=host"
+        "--network=host",
+        "--device=/dev/dri"
     ],
-    "workspaceMount": "source=${localWorkspaceFolder},target=/home/jovyan/work/${localWorkspaceFolderBasename},type=bind",
-    "workspaceFolder": "/home/jovyan/work/${localWorkspaceFolderBasename}",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/founder/work/${localWorkspaceFolderBasename},type=bind",
+    "workspaceFolder": "/home/founder/work/${localWorkspaceFolderBasename}",
     "mounts": [
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/jovyan/.bash_history,type=bind"
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/founder/.bash_history,type=bind"
     ]
 }

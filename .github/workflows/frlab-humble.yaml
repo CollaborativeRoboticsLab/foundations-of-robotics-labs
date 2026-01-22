@@ -1,5 +1,5 @@
 # github action for building and pushing docker images
-name: Build and publish Docker Image frlab-noetic
+name: Build and publish Docker Image frlab-humble
 
 env:
   # OWNER: ${{ github.repository_owner }}
@@ -20,6 +20,7 @@ on:
   push:
     branches:
       - master
+      - main
     paths:
       - ".github/workflows/**"
       - ".binder/**"
@@ -73,5 +74,5 @@ jobs:
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-noetic
-            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-noetic-${{steps.get_sha.outputs.sha12}}
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-humble
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-humble-${{steps.get_sha.outputs.sha12}}
