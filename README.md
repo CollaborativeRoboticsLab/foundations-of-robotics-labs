@@ -17,11 +17,10 @@ The notebooks are designed to be used with a ROS workspace that contains the fol
 
 ## Projects
 
-- [**Project 0 - Primers**](<./0-primers/readme.md>) - Primers on Python, the terminal, and ROS
-- [**Project 1 - Sense -> Think -> Act**](<./1-sense-think-act/readme.md>) - Feedback & Robotic algorithm fundamentals
-- [**Project 2 - Navigation**](<./2-navigation/readme.md>) - Localization, Navigation & Mapping
-- [**Project 3 - Kinematics**](<./3-kinematics/readme.md>) - Kinematics for a Robot Manipulator
-- [**Project 4 - Algorithms**](<./4-algorithms/readme.md>) - Algorithms for Robotics
+- [**Week 2: Primers**](<./week-2/readme.md>) - Primers on Python, the terminal, and ROS
+- [**Week 3-4: Sense -> Think -> Act**](<./week-3/readme.md>) - Feedback & Robotic algorithm fundamentals
+- [**Week 5-8: Navigation**](<./week-5/readme.md>) - Localization, Navigation & Mapping
+- [**Week 10-12: Kinematics**](<./week-10/readme.md>) - Kinematics for a Robot Manipulator
 
 ## Installation
 
