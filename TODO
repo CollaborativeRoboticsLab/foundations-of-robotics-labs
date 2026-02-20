@@ -1,11 +1,12 @@
 # TODO
 
-- [ ] add pictures to everything by going through and doing examples
+- [x] add pictures to everything by going through and doing examples
 
 ## migrate ros2
 
-- [ ] notebooks
-- [ ] improve container use of UI tools
-- [ ] graphical container setup
+- [x] notebooks
+- [x] improve container use of UI tools
+- [x] graphical container setup
+- [x] tbot3 cartographer instead of gmapping, amcl, etc
 - [ ] navigation2 instead of gmapping, amcl, etc
 - [x] reorganize folder structures to simplify
