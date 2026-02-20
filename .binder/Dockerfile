@@ -41,6 +41,7 @@ ENV NB_USER="${NB_USER}" \
     NB_UID=${NB_UID} \
     NB_GID=${NB_GID}
 ENV HOME="/home/${NB_USER}"
+ENV SHELL="/bin/bash"
 
 # create the notebook user
 RUN echo "auth requisite pam_deny.so" >> /etc/pam.d/su && \
@@ -107,4 +108,4 @@ USER ${NB_UID}
 # expose the notebook port and start the notebook server
 EXPOSE 8888
 WORKDIR ${HOME}/work
-ENTRYPOINT ["tini", "--", "/bin/bash", "-c", "cd ${HOME}/work && jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --IdentityProvider.token='' --ServerApp.password=''" ]
+ENTRYPOINT ["tini", "--", "/bin/bash", "-c", "cd ${HOME}/work && jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --IdentityProvider.token='' --ServerApp.password='' --ServerApp.terminado_settings='{"shell_command":["/bin/bash"]}'" ]
