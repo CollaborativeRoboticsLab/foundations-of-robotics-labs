@@ -106,5 +106,5 @@ USER ${NB_UID}
 
 # expose the notebook port and start the notebook server
 EXPOSE 8888
-WORKDIR ${HOME}
-ENTRYPOINT ["tini", "--", "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--IdentityProvider.token=''", "--ServerApp.password=''"]
+WORKDIR ${HOME}/work
+ENTRYPOINT ["tini", "--", "/bin/bash", "-c", "cd ${HOME}/work && jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --IdentityProvider.token='' --ServerApp.password=''" ]
