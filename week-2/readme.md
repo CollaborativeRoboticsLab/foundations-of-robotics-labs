@@ -1,4 +1,4 @@
-# Primers on Python, the terminal, and ROS (week 2)
+# Part I: Foundations (week 2) - Primers on Python, the terminal, and ROS
 
 ## Introduction
 

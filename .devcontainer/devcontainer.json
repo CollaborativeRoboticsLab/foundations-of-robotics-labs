@@ -1,7 +1,7 @@
 {
     "name": "ros jupyter",
     "dockerFile": "../.binder/Dockerfile",
-    "remoteUser": "founder",
+    "remoteUser": "frlab",
     "context": "..",
     "containerEnv": {
         "DISPLAY": "${localEnv:DISPLAY}"
@@ -10,10 +10,10 @@
         "--network=host",
         "--device=/dev/dri"
     ],
-    "workspaceMount": "source=${localWorkspaceFolder},target=/home/founder/work/${localWorkspaceFolderBasename},type=bind",
-    "workspaceFolder": "/home/founder/work/${localWorkspaceFolderBasename}",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/frlab/work/${localWorkspaceFolderBasename},type=bind",
+    "workspaceFolder": "/home/frlab/work/${localWorkspaceFolderBasename}",
     "mounts": [
         "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/founder/.bash_history,type=bind"
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/frlab/.bash_history,type=bind"
     ]
 }

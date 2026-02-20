@@ -1,5 +1,5 @@
 # github action for building and pushing docker images
-name: Build and publish Docker Image frlab-humble
+name: Build and publish Docker Image frlab-jazzy
 
 env:
   # OWNER: ${{ github.repository_owner }}
@@ -74,5 +74,5 @@ jobs:
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-humble
-            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-humble-${{steps.get_sha.outputs.sha12}}
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-jazzy
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:frlab-jazzy-${{steps.get_sha.outputs.sha12}}

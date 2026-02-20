@@ -1,4 +1,4 @@
-# Project 1 - Sense Think Act (week 4)
+# Part I: Foundations (week 4) - Sense Think Act Assignment
 
 ## Introduction
 

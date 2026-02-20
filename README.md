@@ -3,7 +3,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](<https://mybinder.org/v2/gh/CollaborativeRoboticsLab/foundations-of-robotics-labs/HEAD>)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](<https://colab.research.google.com/github/CollaborativeRoboticsLab/foundations-of-robotics-labs>)
 [![Open in Visual Studio Code](https://img.shields.io/badge/vscode-dev-blue)](https://open.vscode.dev/CollaborativeRoboticsLab/foundations-of-robotics-labs)
-[![ROS Version](https://img.shields.io/badge/ROS-Humble-blue)](https://docs.ros.org/en/humble/)
+[![ROS Version](https://img.shields.io/badge/ROS-jazzy-blue)](https://docs.ros.org/en/jazzy/)
 
 These Python Jupyter notebooks are designed for academic teaching laboratories in robotics, using Gazebo for simulation up to physical deployment on robotic platforms. The students are not expected to install or deploy the required ROS workspace on their personal computer, but rather use lab resources at the university. The laboratories were originally designed at École de technologie supérieure, in Montréal, Canada, and  have been heavily adapted for the University of Canberra. Robotic platforms are available for the students to test their algorithms along with shared laptop stations.
 
@@ -17,16 +17,15 @@ The notebooks are designed to be used with a ROS workspace that contains the fol
 
 ## Projects
 
-- [**Week 2: Primers**](<./week-2/readme.md>) - Primers on Python, the terminal, and ROS
-- [**Week 3-4: Sense -> Think -> Act**](<./week-3/readme.md>) - Feedback & Robotic algorithm fundamentals
-- [**Week 5-8: Navigation**](<./week-5/readme.md>) - Localization, Navigation & Mapping
-- [**Week 10-12: Kinematics**](<./week-10/readme.md>) - Kinematics for a Robot Manipulator
+- [**Part I 2-5: Foundations**](<./week-2/readme.md>) - Primers on Python, the terminal, and ROS, Feedback & Robotic algorithm fundamentals
+- [**Part II 6-8: Mobile Robots**](<./week-5/readme.md>) - Localization, Navigation & Mapping
+- [**Part III 10-12: Robot Manipulation**](<./week-10/readme.md>) - Kinematics for a Robot Manipulator
 
 ## Installation
 
 ### ROS
 
-The software requires ROS to be installed to use the `rclpy` libraries. Follow the instructions for ROS `Humble` on the [official website](https://ros.org).
+The software requires ROS to be installed to use the `rclpy` libraries. Follow the instructions for ROS `jazzy` on the [official website](https://ros.org).
 
 ### Virtual Environment
 
