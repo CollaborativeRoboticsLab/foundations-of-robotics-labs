@@ -74,9 +74,8 @@ RUN echo "export QT_X11_NO_MITSHM=1" >> ${HOME}/.bashrc
 
 # export ROS environment variables in bashrc
 RUN echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ${HOME}/.bashrc
-RUN echo "export ROS_LOCALHOST_ONLY=0" >> ${HOME}/.bashrc
 RUN echo "export DISCOVERY_SERVER_PORT=11811" >> ${HOME}/.bashrc
-RUN echo "export ROS_AUTOMATIC_DISCOVERY_RANGE=SUBNET" >> ${HOME}/.bashrc
+RUN echo "export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST" >> ${HOME}/.bashrc
 RUN echo "export ROS_SUPER_CLIENT=True" >> ${HOME}/.bashrc
 RUN echo "source /opt/ros/jazzy/setup.bash" >> ${HOME}/.bashrc
 RUN rosdep update
