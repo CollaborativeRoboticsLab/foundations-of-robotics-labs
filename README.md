@@ -66,6 +66,7 @@ docker build -t frlab -f .binder/Dockerfile .
 docker run -p 8888:8888 frlab jupyter lab --ip=0.0.0.0 --port=8888
 
 # for graphical applications, run the following command instead
+xhost +local:0
 docker run --rm --network host --device /dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix frlab
 ```
 
