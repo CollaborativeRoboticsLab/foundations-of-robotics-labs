@@ -33,7 +33,10 @@ RUN apt-get update && \
     ros-jazzy-turtlebot3 \
     ros-jazzy-turtlebot3-cartographer \
     ros-jazzy-turtlebot3-teleop \
-    ros-jazzy-turtlebot3-gazebo && \
+    ros-jazzy-turtlebot3-gazebo \
+    ros-jazzy-rmw-cyclonedds-cpp \
+    ros-jazzy-ur \
+    ros-jazzy-ur-simulation-gz && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # set up environment variables
@@ -80,15 +83,16 @@ RUN echo "export ROS_SUPER_CLIENT=True" >> ${HOME}/.bashrc
 RUN echo "source /opt/ros/jazzy/setup.bash" >> ${HOME}/.bashrc
 RUN rosdep update
 
-# # get ROS package sources for the course
+# # get ROS package sources for the course (kinova)
 # RUN mkdir -p /home/${NB_USER}/colcon_ws/src && \
 #     cd /home/${NB_USER}/colcon_ws/src && \
-#     # git clone https://github.com/CollaborativeRoboticsLab/sphero_rvr_ros && \
+#     git clone -b claude-fix/issue-338 https://github.com/Kinovarobotics/ros2_kortex.git
+#     git clone https://github.com/CollaborativeRoboticsLab/sphero_rvr_ros && \
 #     git clone -b ros2 https://github.com/CollaborativeRoboticsLab/sphero_rvr_desktop
 
-# # update ROS dependencies
+# update ROS dependencies
 # RUN apt-get update && \
-#     rosdep install --from-paths /home/${NB_USER}/colcon_ws/src/sphero_rvr_desktop --ignore-src -r -y && \
+#     rosdep install --from-paths /home/${NB_USER}/colcon_ws/src/ros2_kortex --ignore-src -r -y && \
 #     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # # build ROS packages
