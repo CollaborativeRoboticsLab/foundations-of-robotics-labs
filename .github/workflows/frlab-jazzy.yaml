@@ -10,6 +10,7 @@ env:
 # For more details on events that trigger workflows see:
 # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 on:
+  workflow_dispatch:
   schedule:
     # monthly, at 07:00 on 1st day UTC time
     - cron: "0 7 1 * *"
@@ -24,7 +25,6 @@ on:
     paths:
       - ".github/workflows/**"
       - ".binder/**"
-  workflow_dispatch:
 
 # https://docs.github.com/en/actions/using-jobs/using-concurrency
 concurrency:
