@@ -2,6 +2,6 @@ empy==3.3.4
 jupyterlab==4.5.2
 matplotlib==3.10.8
 netifaces==0.11.0
-numpy==2.2.6
+numpy==1.26
 otter-grader==6.1.6
-roboticstoolbox-python==1.1.0
+roboticstoolbox-python==1.1.1
